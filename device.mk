@@ -358,6 +358,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     FrameworkOverlayRedwood \
+    NcmTetheringOverlay \
     SettingsOverlayRedwood \
     SettingsProviderOverlayRedwoodCN \
     SettingsProviderOverlayRedwoodGL \
