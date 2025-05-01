@@ -221,7 +221,7 @@ ro.vendor.se.type=eSE,HCE,UICC
 # Perf
 ro.vendor.extension_library=libqti-perfd-client.so
 ro.vendor.perf.scroll_opt=true
-
+vendor.perf.framepacing.enable=1
 # Radio
 keyguard.no_require_sim=true
 persist.radio.multisim.config=dsds
