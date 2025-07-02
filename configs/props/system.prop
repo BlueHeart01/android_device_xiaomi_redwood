@@ -7,8 +7,6 @@ persist.vendor.cne.feature=1
 # Graphics
 debug.sf.disable_backpressure=1
 debug.sf.enable_hwc_vds=0
-debug.hwui.use_hint_manager=true
-debug.hwui.target_cpu_time_percent=30
 
 # Media
 media.aac_51_output_enabled=true
