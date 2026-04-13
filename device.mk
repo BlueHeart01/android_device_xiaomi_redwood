@@ -76,6 +76,12 @@ PRODUCT_PACKAGES += \
     android.hardware.audio.service \
     android.hardware.soundtrigger@2.3-impl
 
+# Dolby
+$(call inherit-product, hardware/dolby/dolby.mk)
+
+PRODUCT_PACKAGES += \
+    LunarisDolby
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_lahaina/audio_effects.xml \
     $(LOCAL_PATH)/audio/audio_io_policy.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_lahaina/audio_io_policy.conf \
