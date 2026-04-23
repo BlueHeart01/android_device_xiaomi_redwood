@@ -8,13 +8,13 @@
 $(call inherit-product, device/xiaomi/redwood/device.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/custom/config/common_full_phone.mk)
 
 PRODUCT_BRAND := POCO
 PRODUCT_DEVICE := redwood
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_MODEL := 22101320G
-PRODUCT_NAME := lineage_redwood
+PRODUCT_NAME := custom_redwood
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
@@ -26,3 +26,18 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     BuildFingerprint=POCO/redwood_global/redwood:14/UKQ1.240624.001/OS2.0.17.0.UMSMIXM:user/release-keys \
     DeviceName=$(PRODUCT_SYSTEM_DEVICE) \
     DeviceProduct=$(PRODUCT_SYSTEM_NAME)
+
+
+#ASCP flags
+WITH_GMS := true
+ASCP_MAINTAINER := BlueHeart016|Sᴀʏᴀɴシ
+WITH_BCR := true
+WITH_REVANCED := true
+ASCP_OFFICIAL := true
+
+# Device props
+TARGET_SUPPORTS_QUICK_TAP := true
+TARGET_FACE_UNLOCK_SUPPORTED := true
+TARGET_DISABLE_EPPE := true
+TARGET_SUPPORTS_NEXT_GEN_ASSISTANT := true
+TARGET_SUPPORTS_OMX_SERVICE := false
