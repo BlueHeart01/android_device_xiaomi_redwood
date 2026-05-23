@@ -210,6 +210,8 @@ vendor.display.disable_idle_time_hdr=1
 vendor.display.vds_allow_hwc=1
 vendor.gralloc.disable_ubwc=0
 debug.sdm.support_writeback=0
+persist.sys.perf.scroll_opt=true
+persist.sys.perf.scroll_opt.heavy_app=1
 
 # Media
 debug.stagefright.c2inputsurface=-1

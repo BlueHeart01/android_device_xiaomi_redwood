@@ -13,3 +13,7 @@ persist.sys.fuse.passthrough.enable=true
 
 # LMK tuning
 ro.lmk.swap_free_low_percentage=100
+
+
+# maintainer
+ro.lunaris.maintainer=BlueHeart016|Sᴀʏᴀɴシ
