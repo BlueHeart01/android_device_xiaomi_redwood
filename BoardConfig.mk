@@ -76,10 +76,15 @@ DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
     hardware/xiaomi/vintf/xiaomi_framework_compatibility_matrix.xml 
     
 
-DEVICE_MANIFEST_FILE := \
+DEVICE_MANIFEST_FILE += \
     $(DEVICE_PATH)/hidl/manifest_lahaina.xml \
     $(DEVICE_PATH)/hidl/manifest_xiaomi.xml \
+<<<<<<< HEAD
     $(if $(TARGET_NFC_SUPPORTED_SKUS),$(DEVICE_PATH)/hidl/manifest_no_nfc.xml,) 
+=======
+    $(DEVICE_PATH)/hidl/c2_manifest_vendor.xml \
+    $(if $(TARGET_NFC_SUPPORTED_SKUS),$(DEVICE_PATH)/hidl/manifest_no_nfc.xml,)
+>>>>>>> de7ed8d (redwood: Inherit Motorola Dolby Atmos with Dolby Vision)
 
 ifneq ($(TARGET_NFC_SUPPORTED_SKUS),)
 ODM_MANIFEST_SKUS += $(TARGET_NFC_SUPPORTED_SKUS)
