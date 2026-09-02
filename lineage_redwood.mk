@@ -26,3 +26,19 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     BuildFingerprint=POCO/redwood_global/redwood:14/UKQ1.240624.001/OS2.0.17.0.UMSMIXM:user/release-keys \
     DeviceName=$(PRODUCT_SYSTEM_DEVICE) \
     DeviceProduct=$(PRODUCT_SYSTEM_NAME)
+
+
+
+#flags
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    RisingChipset="Snapdragon 778G" \
+    RisingMaintainer="BlueHeart016|SaYaN"
+
+RISINGMAINTAINER := BlueHeart016|SaYaN
+TARGET_ENABLE_BLUR := true
+WITH_GMS := true
+TARGET_USES_PICO_GAPPS := true
+ALLOW_ADBD_ROOT := true
+ALLOW_LOCAL_PROP_OVERRIDE := true
+PRODUCT_NO_CAMERA := true
+
