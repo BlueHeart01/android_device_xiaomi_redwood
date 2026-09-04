@@ -31,10 +31,11 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 
 #flags
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    RisingChipset="Snapdragon 778G" \
-    RisingMaintainer="Blueheart016|SaYaN"
+    RisingChipset="Snapdragon 8 Gen 1" \
+    RisingMaintainer="BlueHeart016|SaYaN"
 
-RISINGMAINTAINER := Blueheart016|SaYaN
+RISING_MAINTAINER := Blueheart016|SaYaN
+
 TARGET_ENABLE_BLUR := true
 WITH_GMS := true
 TARGET_USES_PICO_GAPPS := true
