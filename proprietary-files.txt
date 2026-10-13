@@ -1410,7 +1410,7 @@ vendor/etc/wifi/aoa_cldb_swl14.bin
 
 # WiFi Display (system) - from LA.QSSI.17.0.r1-06700-qssi.0
 system_ext/bin/wfdservice64|1c9e8784221485cf97f48fe318590611e899bffc
-system_ext/etc/init/wfdservice.rc|3dfd29a44f37c971b7707b6e47b2b601a9119d12|3dfd29a44f37c971b7707b6e47b2b601a9119d12
+system_ext/etc/init/wfdservice.rc|3dfd29a44f37c971b7707b6e47b2b601a9119d12
 system_ext/etc/permissions/wfd-system-ext-privapp-permissions-qti.xml|6669d5ee462c981663b8ac573d84d334e4eed96c
 system_ext/etc/seccomp_policy/wfdservice64.policy|1e331272649395423b11c575892e0bdc9433b820
 system_ext/etc/wfdconfigsink.xml|7bbf8092ff574be7ed951b1a4026471f51e4b6f5
@@ -1426,7 +1426,7 @@ system_ext/lib64/libwfdmmsink.so|9cf2e11aef6f2de438913732c7b051fc3cb6bb7e
 system_ext/lib64/libwfdmmsrc_system.so|a17477e99166f6f68e9b2a94016b017f43076d42
 system_ext/lib64/libwfdnative.so;SYMLINK=system_ext/priv-app/WfdService/lib/arm64/libwfdnative.so|ee4878c66a0e980ed6c7895872d6b8fa33499f05
 system_ext/lib64/libwfdrtsp.so|8d6a4d72036f3c640a4ef9d1089df6ca999f724f
-system_ext/lib64/libwfdservice.so|8d95ada60f51760d6bdf5774b00d4c475235d5cb|8d95ada60f51760d6bdf5774b00d4c475235d5cb
+system_ext/lib64/libwfdservice.so|8d95ada60f51760d6bdf5774b00d4c475235d5cb
 system_ext/lib64/libwfdsinksm.so|6f4810ec6830d70d1f4af7a9ac8ecdc4f77d967d
 system_ext/lib64/libwfduibcinterface.so|51a755a0beaff683ae56b3636c9d9b4458882fe0
 system_ext/lib64/libwfduibcsinkinterface.so|24a20b161d1ac629854039c7aae0a2135cca97af
@@ -1435,7 +1435,7 @@ system_ext/lib64/libwfduibcsrcinterface.so|a11e1cb31f7ddb423509e54dc6a036445c55d
 system_ext/lib64/libwfduibcsrc.so|b419946a6d0062b9a51d07c0b2f32aa553316bd4
 system_ext/lib64/vendor.qti.hardware.wifidisplaysession@1.0.so|772d0df9f9ae75cde3a63158ff8f05c7f26c9efe
 system_ext/lib64/vendor.qti.hardware.wifidisplaysession_aidl-V2-ndk.so|7e918a1c04b56c12909213a1ca67ca5056edb99c
-system_ext/priv-app/WfdService/WfdService.apk|a6cbc7d81b61298d33be36e2d3b5a297a9a74e84
+system_ext/priv-app/WfdService/WfdService.apk|5bf690251d39303309ed2e14689524c10af9ea19
 system/framework/WfdCommon.jar;BOOT_JAR|c3b24e2d668c84ec878efccc148cf55e68a29d4b
 
 # WiFi Display (vendor)
