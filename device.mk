@@ -360,7 +360,7 @@ $(foreach sku_out, $(TARGET_COPY_OUT_NFC_SKU_PERMISSIONS), \
         frameworks/native/data/etc/com.nxp.mifare.xml:$(sku_out)/com.nxp.mifare.xml))
 
 # Logging
- SPAMMY_LOG_TAGS := \
+SPAMMY_LOG_TAGS := \
      MiStcImpl \
      SDM \
      SDM-histogram \
@@ -375,10 +375,10 @@ $(foreach sku_out, $(TARGET_COPY_OUT_NFC_SKU_PERMISSIONS), \
      vendor.qti.hardware.display.composer-service \
      vendor.xiaomi.sensor.citsensorservice@2.0-service
 
- ifneq ($(TARGET_BUILD_VARIANT),eng)
- PRODUCT_VENDOR_PROPERTIES += \
+ifneq ($(TARGET_BUILD_VARIANT),eng)
+PRODUCT_VENDOR_PROPERTIES += \
      $(foreach tag,$(SPAMMY_LOG_TAGS),log.tag.$(tag)=W)
- endif
+endif
 
 # Overlays
 PRODUCT_PACKAGES += \
