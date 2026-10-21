@@ -8,6 +8,8 @@
 #include <android-base/file.h>
 #include <android-base/logging.h>
 #include <sys/ioctl.h>
+#include <cerrno>
+#include <cstring>
 
 // defines from drivers/input/touchscreen/xiaomi/xiaomi_touch.h
 #define SET_CUR_VALUE 0
@@ -41,8 +43,16 @@ bool setDeviceSpecificMode(Mode type, bool enabled) {
     switch (type) {
         case Mode::DOUBLE_TAP_TO_WAKE: {
             int fd = open(TOUCH_DEV_PATH, O_RDWR);
+            if (fd < 0) {
+                LOG(ERROR) << "Failed to open " TOUCH_DEV_PATH
+                           << ": " << strerror(errno);
+                return false;
+            }
             int arg[3] = {TOUCH_ID, Touch_Doubletap_Mode, enabled ? 1 : 0};
-            ioctl(fd, TOUCH_IOC_SETMODE, &arg);
+            if (ioctl(fd, TOUCH_IOC_SETMODE, &arg) < 0) {
+                LOG(ERROR) << "ioctl TOUCH_IOC_SETMODE failed: "
+                           << strerror(errno);
+            }
             close(fd);
             return true;
         }
