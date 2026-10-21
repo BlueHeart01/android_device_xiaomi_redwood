@@ -1,3 +1,0 @@
-
-# AVB signing keys — never commit private keys to public repos
-keys/*.pem
