@@ -13,7 +13,7 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 PRODUCT_BRAND := POCO
 PRODUCT_DEVICE := redwood
 PRODUCT_MANUFACTURER := Xiaomi
-PRODUCT_MODEL := 22101320G
+PRODUCT_MODEL := POCO X5 Pro 5G
 PRODUCT_NAME := lineage_redwood
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
