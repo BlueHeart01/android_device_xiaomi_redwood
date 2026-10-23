@@ -30,3 +30,16 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 # Flags
 TARGET_INCLUDES_OEM_App := true
 TARGET_INCLUDES_DolbyVision := true
+
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    RisingChipset="Snapdragon 778G" \
+    RisingMaintainer="Blueheart016|SaYaN"
+
+RISING_MAINTAINER := Blueheart016|SaYaN
+
+TARGET_ENABLE_BLUR := true
+WITH_GMS := true
+TARGET_USES_PICO_GAPPS := true
+ALLOW_ADBD_ROOT := true
+ALLOW_LOCAL_PROP_OVERRIDE := true
+PRODUCT_NO_CAMERA := true
