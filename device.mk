@@ -384,6 +384,7 @@ PRODUCT_PACKAGES += \
     CarrierConfigOverlayRedwood \
     LineageSDKOverlayRedwood \
     SettingsSearchOverlayRedwood \
+    LineageSettingsProviderOverlayRedwood \
     TelephonyOverlayRedwood \
     UpdaterOverlayRedwood
 
