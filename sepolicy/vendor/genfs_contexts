@@ -42,3 +42,18 @@ genfscon sysfs /devices/platform/soc/soc:qcom,cpu-llcc-ddr-bw u:object_r:vendor_
 genfscon sysfs /devices/platform/soc/soc:qcom,dsi-display u:object_r:vendor_sysfs_graphics:s0
 genfscon sysfs /devices/platform/soc/soc:qcom,gpubw u:object_r:vendor_sysfs_msm_subsys:s0
 genfscon sysfs /devices/platform/soc/soc:qcom,gpubw/devfreq u:object_r:vendor_sysfs_msm_subsys:s0
+
+# Video: 6.12 builds msm-vidc as a module that first stage init loads, so
+# sku_version exists before the policy does and kept the plain sysfs label
+# until a later restorecon. init.qti.media.sh was denied reading it, picked
+# the yupik v0 media profiles, which redwood lacks, and zygote aborted.
+genfscon sysfs /devices/platform/soc/aa00000.qcom,vidc/sku_version u:object_r:vendor_sysfs_sku:s0
+
+# 6.12: the remote processors, the display and the haptics chip register
+# their wakeup sources at new paths
+genfscon sysfs /devices/platform/soc/3700000.remoteproc-adsp/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/4080000.remoteproc-mss/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/a300000.remoteproc-cdsp/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/soc:remoteproc-wpss@8a00000/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/ae00000.qcom,mdss_mdp/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/ac0000.qcom,qupv3_1_geni_se/a84000.i2c/i2c-2/2-005a/wakeup u:object_r:sysfs_wakeup:s0

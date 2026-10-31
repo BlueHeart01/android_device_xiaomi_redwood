@@ -178,7 +178,7 @@ on charger
     start vendor.power_off_alarm
     setprop sys.usb.controller a600000.dwc3
     setprop sys.usb.configfs 1
-    write /sys/module/lpm_levels/parameters/sleep_disabled N
+    write /sys/devices/system/cpu/qcom_lpm/parameters/sleep_disabled 0
 
 service vendor.lowi /vendor/bin/lowirpcd
    class core
