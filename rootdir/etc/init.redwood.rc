@@ -23,3 +23,9 @@ on property:ro.boot.product.hardware.sku=redwood
     enable vendor.nfc_hal_service
     enable qti_esepowermanager_service_1_1
     enable secureelement-hal_1_2
+
+# hardware/dolby sets debug.c2.use_dmabufheaps=1. 6.12 has the system
+# DMA-BUF heap that 5.4 lacked, so Codec2 then gives up ION, which the
+# 32-bit QTI codecs need for their buffers, and no video plays. Keep ION.
+on early-boot
+    setprop debug.c2.use_dmabufheaps 0
