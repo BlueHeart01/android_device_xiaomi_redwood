@@ -75,6 +75,10 @@ service kernel-post-boot /vendor/bin/sh /vendor/bin/init.kernel.post_boot-yupik.
 on property:sys.boot_completed=1
     write /proc/sys/vm/page-cluster 0
     write /proc/sys/vm/kswapd_threads 1
+    # The 6.12 LPM governor starts with CPU power collapse off and leaves
+    # turning it on to userspace once boot is done; until then every core
+    # only ever idles in WFI
+    write /sys/devices/system/cpu/qcom_lpm/parameters/sleep_disabled 0
 
     start kernel-post-boot
 
