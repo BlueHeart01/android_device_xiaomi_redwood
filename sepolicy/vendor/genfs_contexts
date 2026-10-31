@@ -42,3 +42,9 @@ genfscon sysfs /devices/platform/soc/soc:qcom,cpu-llcc-ddr-bw u:object_r:vendor_
 genfscon sysfs /devices/platform/soc/soc:qcom,dsi-display u:object_r:vendor_sysfs_graphics:s0
 genfscon sysfs /devices/platform/soc/soc:qcom,gpubw u:object_r:vendor_sysfs_msm_subsys:s0
 genfscon sysfs /devices/platform/soc/soc:qcom,gpubw/devfreq u:object_r:vendor_sysfs_msm_subsys:s0
+
+# Video: 6.12 builds msm-vidc as a module that first stage init loads, so
+# sku_version exists before the policy does and kept the plain sysfs label
+# until a later restorecon. init.qti.media.sh was denied reading it, picked
+# the yupik v0 media profiles, which redwood lacks, and zygote aborted.
+genfscon sysfs /devices/platform/soc/aa00000.qcom,vidc/sku_version u:object_r:vendor_sysfs_sku:s0
