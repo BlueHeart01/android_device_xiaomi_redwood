@@ -29,3 +29,10 @@ on property:ro.boot.product.hardware.sku=redwood
 # 32-bit QTI codecs need for their buffers, and no video plays. Keep ION.
 on early-boot
     setprop debug.c2.use_dmabufheaps 0
+
+on boot
+    # The charger driver registers the usb power supply after the health HAL
+    # has started, and the HAL only looks for chargers when it starts, so USB
+    # charging showed as neither USB nor AC. Restart it once the supply is up.
+    wait /sys/class/power_supply/usb/type
+    restart vendor.health-default
