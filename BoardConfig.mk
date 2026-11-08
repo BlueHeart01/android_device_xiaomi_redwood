@@ -5,7 +5,7 @@
 #
 
 DEVICE_PATH := device/xiaomi/redwood
-KERNEL_PATH := device/xiaomi/redwood-kernel-6.12
+KERNEL_PATH := device/xiaomi/redwood-kernel
 
 BOARD_VENDOR := xiaomi
 
@@ -107,22 +107,19 @@ BOARD_KERNEL_CMDLINE += service_locator.enable=1
 BOARD_KERNEL_CMDLINE += iptable_raw.raw_before_defrag=1
 BOARD_KERNEL_CMDLINE += ip6table_raw.raw_before_defrag=1
 BOARD_KERNEL_CMDLINE += androidboot.init_fatal_reboot_target=recovery
-# 6.12 turns unused clocks and power domains off before the display driver
-# takes over the bootloader's splash, which kills the panel
-BOARD_KERNEL_CMDLINE += clk_ignore_unused pd_ignore_unused
+# Firmware requests fall back to ueventd from boot, every vendor module loads in first stage
+BOARD_KERNEL_CMDLINE += sysctl.kernel.firmware_config.force_sysfs_fallback=1
 
 # Kernel Pre-compiled
 TARGET_NO_KERNEL_OVERRIDE := true
 TARGET_KERNEL_SOURCE := $(KERNEL_PATH)/kernel-headers
 BOARD_PREBUILT_DTBOIMAGE := $(KERNEL_PATH)/dtbo.img
 BOARD_PREBUILT_DTBIMAGE_DIR := $(KERNEL_PATH)/dtb
-BOARD_MKBOOTIMG_ARGS += --dtb $(BOARD_PREBUILT_DTBIMAGE_DIR)/01_dtbdump_Qualcomm_Technologies,_Inc._Yupik_SoC.dtb
+BOARD_MKBOOTIMG_ARGS += --dtb $(BOARD_PREBUILT_DTBIMAGE_DIR)/yupik-redwood.dtb
 
-# Kernel - Modules: all of them go in the vendor ramdisk, loaded by first
-# stage init in the prebuilt's order. Keep them unstripped here: the GKI
-# modules Wi-Fi and Bluetooth need only load with their signatures.
-BOARD_VENDOR_RAMDISK_KERNEL_MODULES := $(wildcard $(KERNEL_PATH)/vendor_ramdisk/*.ko)
-BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD := $(strip $(shell cat $(KERNEL_PATH)/vendor_ramdisk/modules.load))
+# Kernel modules
+BOARD_VENDOR_RAMDISK_KERNEL_MODULES := $(wildcard $(KERNEL_PATH)/modules/*.ko)
+BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD := $(strip $(shell cat $(KERNEL_PATH)/modules/modules.load))
 BOARD_DO_NOT_STRIP_VENDOR_RAMDISK_MODULES := true
 
 # Partitions
@@ -204,11 +201,7 @@ TARGET_USE_AOSP_SURFACEFLINGER := true
 
 # Verified Boot
 BOARD_AVB_ENABLE := true
-ifeq ($(TARGET_BUILD_VARIANT),user)
-BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 0
-else
 BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 3
-endif
 BOARD_AVB_RECOVERY_KEY_PATH := external/avb/test/data/testkey_rsa2048.pem
 BOARD_AVB_RECOVERY_ALGORITHM := SHA256_RSA2048
 BOARD_AVB_RECOVERY_ROLLBACK_INDEX := $(PLATFORM_SECURITY_PATCH_TIMESTAMP)
