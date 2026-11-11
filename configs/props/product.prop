@@ -10,6 +10,3 @@ persist.sys.disable_rescue=true
 
 # FUSE passthrough
 persist.sys.fuse.passthrough.enable=true
-
-# LMK tuning
-ro.lmk.swap_free_low_percentage=100
