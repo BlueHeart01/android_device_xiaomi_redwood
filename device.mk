@@ -28,6 +28,9 @@ $(call inherit-product-if-exists, vendor/bcr/bcr.mk)
 # MIUI Camera
 $(call inherit-product-if-exists, vendor/xiaomi/redwood-miuicamera/device.mk)
 
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/permissions/privapp-permissions-miuicamera-redwood.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-miuicamera-redwood.xml
+
 # Setup dalvik vm configs
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
