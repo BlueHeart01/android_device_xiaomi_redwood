@@ -134,6 +134,8 @@ on boot
     chown system system /sys/class/thermal/thermal_message/charger_temp
     chmod 0664 /sys/class/thermal/thermal_message/flash_state
     chown cameraserver cameraserver /sys/class/thermal/thermal_message/flash_state
+    chown system system /sys/class/qcom-battery/night_charging
+    chmod 0660 /sys/class/qcom-battery/night_charging
 
     # Set xiaomi touch permissions
     chown system system /dev/xiaomi-touch
