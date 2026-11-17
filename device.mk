@@ -383,7 +383,9 @@ PRODUCT_PACKAGES += \
     ApertureOverlayRedwood \
     CarrierConfigOverlayRedwood \
     LineageSDKOverlayRedwood \
-    TelephonyOverlayRedwood
+    SettingsSearchOverlayRedwood \
+    TelephonyOverlayRedwood \
+    UpdaterOverlayRedwood
 
 PRODUCT_PACKAGES += \
     FrameworkOverlayRedwood \

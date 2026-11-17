@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <!-- The build fingerprint stays the same across updates, so search uses the app that re-indexes on the build number -->
+    <string name="config_settingsintelligence_package_name" translatable="false">com.android.settings.intelligence</string>
+</resources>
