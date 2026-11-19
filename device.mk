@@ -385,8 +385,7 @@ PRODUCT_PACKAGES += \
     LineageSDKOverlayRedwood \
     SettingsSearchOverlayRedwood \
     LineageSettingsProviderOverlayRedwood \
-    TelephonyOverlayRedwood \
-    UpdaterOverlayRedwood
+    TelephonyOverlayRedwood 
 
 PRODUCT_PACKAGES += \
     FrameworkOverlayRedwood \
