@@ -19,6 +19,7 @@
         "1324800",
         "691200"
       ],
+      "DefaultIndex": 3,
       "ResetOnInit": true
     },
     {
@@ -41,6 +42,7 @@
         "1228800",
         "691200"
       ],
+      "DefaultIndex": 4,
       "ResetOnInit": true
     },
     {
@@ -62,6 +64,7 @@
         "1324800",
         "806400"
       ],
+      "DefaultIndex": 2,
       "ResetOnInit": true
     },
     {
@@ -71,7 +74,7 @@
         "30",
         "0"
       ],
-      "DefaultIndex": 0,
+      "DefaultIndex": 1,
       "ResetOnInit": true
     },
     {
@@ -101,6 +104,7 @@
         "1 => 450000000",
         "3 => 180000000"
       ],
+      "DefaultIndex": 2,
       "ResetOnInit": true
     },
     {
@@ -110,6 +114,7 @@
         "1",
         "0"
       ],
+      "DefaultIndex": 1,
       "ResetOnInit": true
     },
     {
@@ -119,6 +124,7 @@
         "1",
         "0"
       ],
+      "DefaultIndex": 1,
       "ResetOnInit": true
     },
     {
@@ -128,6 +134,7 @@
         "10000",
         "58"
       ],
+      "DefaultIndex": 1,
       "ResetOnInit": true
     },
     {
@@ -137,6 +144,7 @@
         "0",
         "3"
       ],
+      "DefaultIndex": 1,
       "ResetOnInit": true
     },
     {
@@ -146,6 +154,7 @@
         "0",
         "20"
       ],
+      "DefaultIndex": 1,
       "ResetOnInit": true
     },
     {
@@ -155,6 +164,7 @@
         "0",
         "10"
       ],
+      "DefaultIndex": 1,
       "ResetOnInit": true
     },
     {
@@ -165,6 +175,7 @@
         "9155",
         "4577"
       ],
+      "DefaultIndex": 2,
       "ResetOnInit": true
     },
     {
@@ -175,6 +186,7 @@
         "3879",
         "762"
       ],
+      "DefaultIndex": 2,
       "ResetOnInit": true
     },
     {
@@ -201,7 +213,7 @@
       "PowerHint": "INTERACTION",
       "Node": "UclampTAMin",
       "Duration": 58,
-      "Value": "30"
+      "Value": "0"
     },
     {
       "PowerHint": "INTERACTION",
@@ -225,31 +237,31 @@
       "PowerHint": "INTERACTION",
       "Node": "CPUBWMinFreq",
       "Duration": 58,
-      "Value": "9155"
+      "Value": "4577"
     },
     {
       "PowerHint": "INTERACTION",
       "Node": "LLCCBWMinFreq",
       "Duration": 58,
-      "Value": "3879"
+      "Value": "762"
     },
     {
       "PowerHint": "LAUNCH",
       "Node": "CPUBigClusterMinFreq",
       "Duration": 1000,
-      "Value": "2400000"
+      "Value": "1651200"
     },
     {
       "PowerHint": "LAUNCH",
       "Node": "CPUBigPlusClusterMinFreq",
       "Duration": 1000,
-      "Value": "2400000"
+      "Value": "1324800"
     },
     {
       "PowerHint": "LAUNCH",
       "Node": "CPULittleClusterMinFreq",
       "Duration": 1000,
-      "Value": "1804800"
+      "Value": "1324800"
     },
     {
       "PowerHint": "LAUNCH",
@@ -283,21 +295,9 @@
     },
     {
       "PowerHint": "LAUNCH",
-      "Node": "GPUForceClkOn",
-      "Duration": 1000,
-      "Value": "1"
-    },
-    {
-      "PowerHint": "LAUNCH",
-      "Node": "GPUForceRailOn",
-      "Duration": 1000,
-      "Value": "1"
-    },
-    {
-      "PowerHint": "LAUNCH",
       "Node": "GPUIdleTimer",
       "Duration": 1000,
-      "Value": "10000"
+      "Value": "58"
     },
     {
       "PowerHint": "EXPENSIVE_RENDERING",
